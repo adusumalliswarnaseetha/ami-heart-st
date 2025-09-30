@@ -1,0 +1,5 @@
+.Rproj.user
+_MACOSX
+renv/
+.Rhistory
+renv.lock

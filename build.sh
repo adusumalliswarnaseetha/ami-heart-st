@@ -1,0 +1,1 @@
+docker buildx build --platform=linux/x86_64 -t mi-heart-st:latest -f Dockerfile  .

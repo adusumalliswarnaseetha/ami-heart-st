@@ -1,0 +1,5 @@
+.Rproj.user/
+*.Rproj
+build.sh
+.gitignore
+.git?

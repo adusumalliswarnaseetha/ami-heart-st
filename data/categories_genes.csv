@@ -1,0 +1,48 @@
+﻿group,gene
+Cardiac progenitors,ACTC1
+Cardiac progenitors,ANKRD1
+Cardiac progenitors,MYH6
+Cardiac progenitors,NKX2-5
+Cardiac progenitors,KDR
+Cardiac progenitors,KIT
+Cardiac progenitors,MESP1
+Cardiac progenitors,ISL1
+Cardiac progenitors,PDGFRA
+Mature cardiac markers,ACTN2
+Mature cardiac markers,MYH7
+Mature cardiac markers,MYL2
+Mature cardiac markers,TNNC1
+Mature cardiac markers,TNNI1
+Mature cardiac markers,TNNI3
+Mature cardiac markers,TNNT2
+Mature cardiac markers,TTN
+Mature cardiac markers,TPM1
+Myosin,MYH6
+Myosin,MHY7
+Myosin,MYL2
+Myosin,MYL4
+Myosin,MYL7
+Troponins,TNNC1
+Troponins,TNNI1
+Troponins,TNNI3
+Troponins,TNNT2
+calcium channel,PLN
+calcium channel,RYR2
+calcium channel,CACNA1C
+calcium channel,CACNAB2
+Potassium channel,KCNH2
+Potassium channel,KCNJ8
+Potassium channel,KCNMB4
+T-tubules,GJA1
+T-tubules,TCAP
+T-tubules,CSRP3
+Fibroblasts,COL1A1
+Fibroblasts,COL1A2
+Fibroblasts,FN1
+Fibroblasts,VIM
+Fibroblasts,LUM
+Endothelial,PECAM1
+Endothelial,VWF
+Endothelial,VEGFA
+Endothelial,VEGFB
+Endothelial,VEGFC
