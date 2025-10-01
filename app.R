@@ -33,7 +33,8 @@ options(shiny.port = 8180)
 # 
 # 
 model_choices = c('AMI')
-ami_data <- readRDS(file.path('data','AMI','Acute_Clustering2.rds'))
+#ami_data <- readRDS(file.path('data','AMI','Acute_Clustering2.rds'))
+ami_data <- base::readRDS('Acute_Clustering2.rds')
 ami_data@meta.data$week <- unlist(lapply(ami_data@meta.data$slide_id, function(x) { unlist(strsplit(x,"_"))[1] }))
 ami_data@meta.data$rep <- unlist(lapply(ami_data@meta.data$slide_id, function(x) { unlist(strsplit(x,"_"))[2] }))
 ami_data@meta.data$rep[which(ami_data@meta.data$rep=="Rep1")] <- "Transplanted1"
