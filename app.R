@@ -34,7 +34,7 @@ options(shiny.port = 8180)
 # 
 model_choices = c('AMI')
 #ami_data <- readRDS(file.path('data','AMI','Acute_Clustering2.rds'))
-ami_data <- base::readRDS('Acute_Clustering2.rds')
+ami_data <- readRDS('data/AMI/Acute_Clustering2.rds')
 ami_data@meta.data$week <- unlist(lapply(ami_data@meta.data$slide_id, function(x) { unlist(strsplit(x,"_"))[1] }))
 ami_data@meta.data$rep <- unlist(lapply(ami_data@meta.data$slide_id, function(x) { unlist(strsplit(x,"_"))[2] }))
 ami_data@meta.data$rep[which(ami_data@meta.data$rep=="Rep1")] <- "Transplanted1"
@@ -45,7 +45,8 @@ ami_data@meta.data$sampleid[which(ami_data@meta.data$rep=="Transplanted1" & ami_
 ami_data@meta.data$sampleid[which(ami_data@meta.data$rep=="Transplanted2" & ami_data@meta.data$week=="1wk")] <- 2
 ami_data@meta.data$sampleid[which(ami_data@meta.data$rep=="Transplanted2" & ami_data@meta.data$week=="2wk")] <- 4
 
-ami_data_avg <- read.table(file.path("data","AMI","ami_data_avg.csv"), sep="\t")
+#ami_data_avg <- read.table(file.path("data","AMI","ami_data_avg.csv"), sep="\t")
+ami_data_avg <- read.table("data/AMI/ami_data_avg.csv", sep="\t")
 ami_genes <- sort(unique(unlist(lapply(row.names(ami_data@assays$RNA$data), function(x) { gsub(substr(x, 1,7),"", x) }))))
 ami_species <- sort(unique(unlist(lapply(row.names(ami_data@assays$RNA$data), function(x) { substr(x, 1,6) }))))
 
@@ -58,7 +59,7 @@ ami_gene_species$species_name[which(ami_gene_species$species=='GRCh38')] <- 'GRC
 ami_gene_species$species_name[which(ami_gene_species$species=='Ssus11')] <- 'Ssus11 (Pig)'
 
 
-ami_clusters <- read.table(file.path("data","AMI","Acute_deMarkers_ALL_Clusters.txt"), sep="\t",row.names = 1, header = T)
+ami_clusters <- read.table('data/AMI/Acute_deMarkers_ALL_Clusters.txt', sep="\t",row.names = 1, header = T)
 #row.names(ami_clusters) <- NULL
 
 ami_human_clusterids <- c(9,10)
@@ -66,14 +67,17 @@ ami_human_clusterids <- c(9,10)
 
 
 
-gene_categories <- read.csv(file.path("data","categories_genes.csv"), header=T)
+#gene_categories <- read.csv(file.path("data","categories_genes.csv"), header=T)
+gene_categories <- read.csv('data/categories_genes.cs', header=T)
 
 cell_timepoints <- paste(as.character(c(1,4,12)),'wk', sep = "")
 
-human_gene2ensembl <- read.table(file.path("data","Homo_sapiens.GRCh38.102_gene_annotation_table.txt"), header=T)
+#human_gene2ensembl <- read.table(file.path("data","Homo_sapiens.GRCh38.102_gene_annotation_table.txt"), header=T)
+human_gene2ensembl <- read.table('data/Homo_sapiens.GRCh38.102_gene_annotation_table.txt', header=T)
 
 
-pig_gene2ensembl <- read.table(file.path("data","Pig_EnsemblID.txt"), header=T)
+#pig_gene2ensembl <- read.table(file.path("data","Pig_EnsemblID.txt"), header=T)
+pig_gene2ensembl <- read.table('data/Pig_EnsemblID.txt', header=T)
 #gene_id GeneSymbol are the column names 
 
 
