@@ -1,0 +1,13 @@
+name: ami-heart-st
+title: ami-heart-st
+username: ly-lab
+account: ly-lab
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 15637983
+bundleId: 10983676
+url: https://ly-lab.shinyapps.io/ami-heart-st/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: .dockerignore|.gitattributes|build.sh|Dockerfile|push_ecr.sh
